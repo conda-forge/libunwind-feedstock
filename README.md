@@ -14,14 +14,16 @@ Summary: Defines a portable and efficient C programming interface (API) to deter
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libunwind-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/libunwind-feedstock)
-OSX: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/libunwind-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/libunwind-feedstock)
+![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libunwind/badges/version.svg)](https://anaconda.org/conda-forge/libunwind)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libunwind/badges/downloads.svg)](https://anaconda.org/conda-forge/libunwind)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libunwind-green.svg)](https://anaconda.org/conda-forge/libunwind) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libunwind.svg)](https://anaconda.org/conda-forge/libunwind) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libunwind.svg)](https://anaconda.org/conda-forge/libunwind) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libunwind.svg)](https://anaconda.org/conda-forge/libunwind) |
 
 Installing libunwind
 ====================
