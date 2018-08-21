@@ -15,7 +15,7 @@ source:
     - run-coredump-unwind.patch
 
 build:
-  number: 0
+  number: 1000
   skip: True  # [win or osx]
 
 requirements:
