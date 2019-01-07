@@ -1,6 +1,6 @@
 {% set name = "libunwind" %}
-{% set version = "1.2.1" %}
-{% set sha256 = "3f3ecb90e28cbe53fba7a4a27ccce7aad188d3210bb1964a923a731a27a75acb" %}
+{% set version = "1.3.0" %}
+{% set sha256 = "ec07d537c68a20de129788cd8254e96b1acb75c0ad53aebd0d0f93698138561a" %}
 
 package:
   name: {{ name|lower }}
