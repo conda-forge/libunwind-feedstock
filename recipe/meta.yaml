@@ -15,17 +15,23 @@ source:
 
 build:
   number: 0
+  run_exports:
+    # breaks backwards compatibility sometimes
+    # https://abi-laboratory.pro/index.php?view=timeline&l=libunwind
+    - {{ pin_subpackage('libunwind', max_pin='x.x') }}
   skip: true  # [win or osx]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - make
   host:
 
 test:
   commands:
     - test -f "${PREFIX}/lib/libunwind.so"
+    - test ! -f "${PREFIX}/lib/libunwind.a"
     - test -f "${PREFIX}/include/libunwind.h"
     - test -f "${PREFIX}/include/unwind.h"
     - conda inspect linkages -p "${PREFIX}" "{{ name }}"
