@@ -14,11 +14,11 @@ source:
     - run-coredump-unwind.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
-    # breaks backwards compatibility sometimes
+    # breaks backwards compatibility sometimes but we truts the maintainers that they were only internal
     # https://abi-laboratory.pro/index.php?view=timeline&l=libunwind
-    - {{ pin_subpackage('libunwind', max_pin='x.x') }}
+    - {{ pin_subpackage('libunwind', max_pin='x') }}
   skip: true  # [win or osx]
 
 requirements:
