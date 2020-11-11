@@ -5,11 +5,9 @@ Home: http://www.nongnu.org/libunwind
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libunwind-feedstock/blob/master/LICENSE.txt)
 
 Summary: Defines a portable and efficient C programming interface (API) to determine the call-chain of a program
-
-
 
 Current build status
 ====================
