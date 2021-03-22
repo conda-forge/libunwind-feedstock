@@ -8,10 +8,6 @@ package:
 source:
   url: http://download.savannah.nongnu.org/releases/libunwind/libunwind-{{ version }}.tar.gz
   sha256: 90337653d92d4a13de590781371c604f9031cdb50520366aa1e3a91e1efb1017
-  patches:
-    # no-op failing test. No clear explanation for failure. Only discussion went unresolved on upstream mailing
-    # list: https://lists.nongnu.org/archive/html/libunwind-devel/2015-01/msg00010.html
-    - run-coredump-unwind.patch
 
 build:
   number: 0
