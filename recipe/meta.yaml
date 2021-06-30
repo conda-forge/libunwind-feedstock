@@ -12,7 +12,7 @@ source:
 build:
   number: 0
   run_exports:
-    # breaks backwards compatibility sometimes but we truts the maintainers that they were only internal
+    # breaks backwards compatibility sometimes but we trust the maintainers that they were only internal
     # https://abi-laboratory.pro/index.php?view=timeline&l=libunwind
     - {{ pin_subpackage('libunwind', max_pin='x') }}
   skip: true  # [win or osx]
@@ -26,7 +26,8 @@ requirements:
 
 test:
   commands:
-    - test -f "${PREFIX}/lib64/libunwind.so"
+    - test -f "${PREFIX}/lib/libunwind.so"  # [x86_64] 
+    - test -f "${PREFIX}/lib64/libunwind.so"  # [ppc64le] 
     - test ! -f "${PREFIX}/lib64/libunwind.a"
     - test -f "${PREFIX}/include/libunwind.h"
     - test -f "${PREFIX}/include/unwind.h"
