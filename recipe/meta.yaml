@@ -8,6 +8,8 @@ package:
 source:
   url: http://download.savannah.nongnu.org/releases/libunwind/libunwind-{{ version }}.tar.gz
   sha256: 90337653d92d4a13de590781371c604f9031cdb50520366aa1e3a91e1efb1017 
+  patches:
+    - patches/lib64.patch
 
 build:
   number: 1 
@@ -22,13 +24,15 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make
+    - autoconf
+    - automake
+    - libtool
   host:
 
 test:
   commands:
-    - test -f "${PREFIX}/lib/libunwind.so"  # [x86_64] 
-    - test -f "${PREFIX}/lib64/libunwind.so"  # [ppc64le] 
-    - test ! -f "${PREFIX}/lib64/libunwind.a"
+    - test -f "${PREFIX}/lib/libunwind.so"
+    - test ! -f "${PREFIX}/lib/libunwind.a"
     - test -f "${PREFIX}/include/libunwind.h"
     - test -f "${PREFIX}/include/unwind.h"
 
