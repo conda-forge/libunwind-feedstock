@@ -12,7 +12,7 @@ source:
     - patches/lib64.patch
 
 build:
-  number: 0
+  number: 1 
   run_exports:
     # breaks backwards compatibility sometimes but we trust the maintainers that they were only internal
     # https://abi-laboratory.pro/index.php?view=timeline&l=libunwind
