@@ -25,6 +25,7 @@ requirements:
     - {{ compiler('cxx') }}
     - make
     - autoconf
+    - automake
   host:
 
 test:
