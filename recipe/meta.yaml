@@ -1,5 +1,5 @@
 {% set name = "libunwind" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,16 +7,14 @@ package:
 
 source:
   url: http://download.savannah.nongnu.org/releases/libunwind/libunwind-{{ version }}.tar.gz
-  sha256: df59c931bd4d7ebfd83ee481c943edf015138089b8e50abed8d9c57ba9338435
+  sha256: 90337653d92d4a13de590781371c604f9031cdb50520366aa1e3a91e1efb1017 
   patches:
-    # no-op failing test. No clear explanation for failure. Only discussion went unresolved on upstream mailing
-    # list: https://lists.nongnu.org/archive/html/libunwind-devel/2015-01/msg00010.html
-    - run-coredump-unwind.patch
+    - patches/lib64.patch
 
 build:
-  number: 1
+  number: 0
   run_exports:
-    # breaks backwards compatibility sometimes but we truts the maintainers that they were only internal
+    # breaks backwards compatibility sometimes but we trust the maintainers that they were only internal
     # https://abi-laboratory.pro/index.php?view=timeline&l=libunwind
     - {{ pin_subpackage('libunwind', max_pin='x') }}
   skip: true  # [win or osx]
@@ -26,6 +24,9 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make
+    - autoconf
+    - automake
+    - libtool
   host:
 
 test:
@@ -34,7 +35,6 @@ test:
     - test ! -f "${PREFIX}/lib/libunwind.a"
     - test -f "${PREFIX}/include/libunwind.h"
     - test -f "${PREFIX}/include/unwind.h"
-    - conda inspect linkages -p "${PREFIX}" "{{ name }}"
 
 about:
   home: http://www.nongnu.org/libunwind
@@ -47,3 +47,4 @@ extra:
   recipe-maintainers:
     - synapticarbors
     - xhochy
+    - matthiasdiener
