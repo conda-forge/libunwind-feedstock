@@ -6,8 +6,6 @@ autoreconf -fiv
 
 ./configure --prefix=$PREFIX --disable-static
 
-cat Makefile
-
 # First call only the install target as compilation for tests only works with an installed libunwind
 make install -j${CPU_COUNT}
 make -j${CPU_COUNT}
