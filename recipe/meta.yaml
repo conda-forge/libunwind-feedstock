@@ -1,5 +1,5 @@
 {% set name = "libunwind" %}
-{% set version = "1.5.0" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: http://download.savannah.nongnu.org/releases/libunwind/libunwind-{{ version }}.tar.gz
-  sha256: 90337653d92d4a13de590781371c604f9031cdb50520366aa1e3a91e1efb1017 
+  sha256: 7194c20dda841b26917c0579e6467b53f7ad2e3f9452e5c77f3c3829c4656b70
   patches:
     - patches/lib64.patch
 
 build:
-  number: 1 
+  number: 0
   run_exports:
     # breaks backwards compatibility sometimes but we trust the maintainers that they were only internal
     # https://abi-laboratory.pro/index.php?view=timeline&l=libunwind
@@ -41,7 +41,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: COPYING
-  summary: 'Defines a portable and efficient C programming interface (API) to determine the call-chain of a program'
+  summary: Defines a portable and efficient C programming interface (API) to determine the call-chain of a program
 
 extra:
   recipe-maintainers:
