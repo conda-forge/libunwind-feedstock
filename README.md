@@ -1,7 +1,7 @@
 About libunwind
 ===============
 
-Home: http://www.nongnu.org/libunwind
+Home: https://www.nongnu.org/libunwind
 
 Package license: MIT
 
@@ -11,7 +11,7 @@ Summary: Defines a portable and efficient C programming interface (API) to deter
 
 Development: https://github.com/libunwind/libunwind
 
-Documentation: http://www.nongnu.org/libunwind/docs.html
+Documentation: https://www.nongnu.org/libunwind/docs.html
 
 Current build status
 ====================
