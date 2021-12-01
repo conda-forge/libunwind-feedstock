@@ -1,13 +1,17 @@
 About libunwind
 ===============
 
-Home: http://www.nongnu.org/libunwind
+Home: https://www.nongnu.org/libunwind
 
 Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libunwind-feedstock/blob/master/LICENSE.txt)
 
 Summary: Defines a portable and efficient C programming interface (API) to determine the call-chain of a program
+
+Development: https://github.com/libunwind/libunwind
+
+Documentation: https://www.nongnu.org/libunwind/docs.html
 
 Current build status
 ====================
