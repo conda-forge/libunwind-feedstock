@@ -10,11 +10,11 @@ source:
   sha256: 7194c20dda841b26917c0579e6467b53f7ad2e3f9452e5c77f3c3829c4656b70
 
 build:
-  number: 0
+  number: 1
   run_exports:
-    # breaks backwards compatibility sometimes but we trust the maintainers that they were only internal
+    # breaks backwards compatibility sometimes
     # https://abi-laboratory.pro/index.php?view=timeline&l=libunwind
-    - {{ pin_subpackage('libunwind', max_pin='x') }}
+    - {{ pin_subpackage('libunwind', max_pin='x.x') }}
   skip: true  # [win or osx]
 
 requirements:
@@ -40,6 +40,8 @@ about:
   license_family: MIT
   license_file: COPYING
   summary: Defines a portable and efficient C programming interface (API) to determine the call-chain of a program
+  dev_url: https://github.com/libunwind/libunwind
+  doc_url: http://www.nongnu.org/libunwind/docs.html
 
 extra:
   recipe-maintainers:
