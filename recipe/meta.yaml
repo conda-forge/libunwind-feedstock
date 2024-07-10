@@ -1,13 +1,12 @@
-{% set name = "libunwind" %}
-{% set version = "1.6.2" %}
+{% set version = "1.7.2" %}
 
 package:
-  name: {{ name|lower }}
+  name: libunwind
   version: {{ version }}
 
 source:
-  url: http://download.savannah.nongnu.org/releases/libunwind/libunwind-{{ version }}.tar.gz
-  sha256: 4a6aec666991fb45d0889c44aede8ad6eb108071c3554fcdff671f9c94794976
+  url: https://github.com/libunwind/libunwind/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: c76c4f340071ede486af6342d50e17747f7b0db1c05077c8f7c677c09b324f73
 
 build:
   number: 0
@@ -19,6 +18,7 @@ build:
 
 requirements:
   build:
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make
