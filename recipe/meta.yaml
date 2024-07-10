@@ -1,8 +1,7 @@
-{% set name = "libunwind" %}
 {% set version = "1.6.2" %}
 
 package:
-  name: {{ name|lower }}
+  name: libunwind
   version: {{ version }}
 
 source:
