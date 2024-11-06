@@ -1,4 +1,4 @@
-{% set version = "1.7.2" %}
+{% set version = "1.8.1" %}
 
 package:
   name: libunwind
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/libunwind/libunwind/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: c76c4f340071ede486af6342d50e17747f7b0db1c05077c8f7c677c09b324f73
+  sha256: 38833b7b1582db7d76485a62a213706c9252b3dab7380069fea5824e823d8e41
 
 build:
   number: 0
