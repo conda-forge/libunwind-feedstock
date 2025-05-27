@@ -4,6 +4,9 @@ set -x
 
 autoreconf -fiv
 
+# Source: https://llvm.org/doxygen/BinaryFormat_2ELF_8h_source.html
+sed -i '1s;^;#define NT_ARM_PAC_MASK 0x406;' src/ptrace/_UPT_ptrauth_insn_mask.c
+
 ./configure --prefix=$PREFIX --disable-static
 
 make -j${CPU_COUNT}
