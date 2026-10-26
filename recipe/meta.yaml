@@ -9,7 +9,7 @@ source:
   sha256: 21b26bc75cd37b548d7952f2794cde711efa6c6151c4147cc3c52cfedbf11df4
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # breaks backwards compatibility sometimes
     # https://abi-laboratory.pro/index.php?view=timeline&l=libunwind
